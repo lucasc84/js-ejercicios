@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="#">
+  <title>Pruebas Javascript</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+    button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mis js de JavaScript</h1>
+
+  <h2>Unidad 1</h2>
+
+
+  <h3>Unidad 1 - Clase Practica</h3>
+
+  <button onclick="cargarEjercicio('js/u1-cp1-nombre-anio.js')">u1-cp1-nombre-anio</button>
+  <button onclick="cargarEjercicio('js/u1-cp1-multiplicacion-pi.js')">u1-cp1-multiplicacion-pi</button>
+  <button onclick="cargarEjercicio('js/u1-cp1-nombre-edad.js')">u1-cp1-nombre-edad</button>
+  <button onclick="cargarEjercicio('js/u1-cp1-suma-alert.js')">u1-cp1-suma-alert</button>
+  <button onclick="cargarEjercicio('js/u1-cp1-condicionales.js')">u1-cp1-condicionales</button>
+  <button onclick="cargarEjercicio('js/u1-cp1-for.js')">u1-cp1-for</button>
+  <button onclick="cargarEjercicio('js/u1-cp1-while.js')">u1-cp1-while</button>
+
+  <h2>Unidad 2</h2>
+
+  <h3>Unidad 2 - Web</h3>
+
+  <button onclick="cargarEjercicio('js/u2-1-operadores-bar.js')">u2-1-bar</button>
+  <button onclick="cargarEjercicio('js/u2-2-ciclo-condicional-password.js')">u2-2-ciclo-condicional-password</button>
+  <button onclick="window.location.href='pages/u2-3-operadores-condicionales-descuento.html' ">u2-3-operadores-condicionales-descuento</button>
+
+  <h3>Unidad 2 - Web - Actividad Practica</h3>
+
+  <button onclick="cargarEjercicio('js/u2-ap1-suma.js')">u2-ap1-suma</button>
+  <button onclick="cargarEjercicio('js/u2-ap2-concatena-texto.js')">u2-ap2-concatena-texto</button>
+  <button onclick="cargarEjercicio('js/u2-ap3-repeticion-msg.js')">u2-ap3-repeticion-msg</button>
+
+  <h3>Unidad 2 - Clase Practica</h3>
+  <button onclick="cargarEjercicio('js/u2-cp1-condicionales-prestamo.js')">u2-cp1-condicionales-prestamo</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-for-suma.js')">u2-cp1-for-suma</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-for-turnos.js')">u2-cp1-for-turnos</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-continue.js')">u2-cp1-continue</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-break.js')">u2-cp1-break</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-while-datos-ESC.js')">u2-cp1-while-datos-ESC</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-while-registro.js')">u2-cp1-while-registro</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-while-web-mantenimiento.js')">u2-cp1-while-web-mantenimiento</button>
+  <button onclick="cargarEjercicio('js/u2-cp1-while-prestamo.js')">u2-cp1-while-prestamo</button>
+
+  <h2>Unidad 3</h2>
+
+  <h3>Unidad 3 - Web</h3>
+  <button onclick="cargarEjercicio('js/u3-1-function-suma-basica.js')">u3-1-function-suma-basica</button>
+  <button onclick="cargarEjercicio('js/u3-1-function-suma-avanzada.js')">u3-1-function-suma-avanzada</button>
+  <button onclick="cargarEjercicio('js/u3-1-function-comparacion-con-sin.js')">u3-1-function-comparacion-con-sin</button>  
+  <button onclick="cargarEjercicio('js/u3-1-function-descuento.js')">u3-1-function-descuento</button>  
+  <button onclick="cargarEjercicio('js/u3-1-function-descuento-impuestos.js')">u3-1-function-descuento-impuestos</button>  
+
+
+  
+
+  
+
+  <script>
+    function cargarEjercicio(nombreArchivo) {
+      // Elimina scripts anteriores
+      const anteriores = document.querySelectorAll("script[data-ejercicio]");
+      anteriores.forEach(script => script.remove());
+
+      // Crea nuevo script
+      const nuevoScript = document.createElement("script");
+      nuevoScript.src = nombreArchivo;
+      nuevoScript.dataset.ejercicio = "true"; // etiqueta para reconocerlo
+      document.body.appendChild(nuevoScript);
+    }
+  </script>
+</body>
+</html>
