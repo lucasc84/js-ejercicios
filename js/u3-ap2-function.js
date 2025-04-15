@@ -26,10 +26,10 @@ const subtotales = (cBan, cFrut, cManz, pBan, pFrut, pManz) => {
 
 // Función tradicional
 function mostrarResultado(cantBanana, cantFrutilla, cantManzana, subtotalBanana, subtotalFrutilla, subtotalManzana, total) {
-  alert("El precio total de " + cantBanana + " Bananas, es: " + subtotalBanana);
-alert("El precio total de " + cantFrutilla + " Frutillas, es: " + subtotalFrutilla);
-alert("El precio total de " + cantManzana + " Manzanas, es: " + subtotalManzana);
-alert("El precio total es de" + total);
+  alert("El precio total de " + cantBanana + " Bananas es: " + subtotalBanana);
+alert("El precio total de " + cantFrutilla + " Frutillas es: " + subtotalFrutilla);
+alert("El precio total de " + cantManzana + " Manzanas es: " + subtotalManzana);
+alert("El precio total es de " + total);
 
   console.log("Cantidad de Bananas: " + cantBanana + " | Precio de bananas: " + subtotalBanana);
   console.log("Cantidad de Frutillas: " + cantFrutilla + " | Precio de Frutillas: " + subtotalFrutilla);
