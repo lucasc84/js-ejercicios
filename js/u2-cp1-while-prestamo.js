@@ -58,6 +58,5 @@ if(prestamo == 'SI' ){
     }
 
     alert(`Tu monto a devolver al banco ${banco} es de ${monto * interes}`)
-
 }
 
