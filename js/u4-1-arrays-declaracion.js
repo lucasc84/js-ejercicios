@@ -30,3 +30,21 @@ let matriz = [
 
 console.log(matriz); // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 console.log(matriz[1][2]); // 6
+
+//RECORRER ARRAYS
+
+
+
+// Supongamos que tenemos el siguiente array de números
+const recorrerNumeros = [10, 20, 30, 40, 50];
+
+// Para recorrer este array usaremos un bucle for
+for (let i = 0; i < recorrerNumeros.length; i++) {
+    console.log(recorrerNumeros[i]); // Esto imprimirá cada número del array en la consola
+}
+
+// Acceso a Elementos Específicos
+const fruta = ["Manzana", "Banana", "Cereza"];
+console.log(fruta[0]); // Salida: Manzana
+console.log(fruta[1]); // Salida: Banana
+console.log(fruta[fruta.length - 1]); // Salida: Cereza - Utilizamos length - 1 para acceder al último elemento.
