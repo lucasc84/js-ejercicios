@@ -1,5 +1,5 @@
 // ==============================
-// Primera Preentrega - Turnero para una casa de préstamos
+// Primera Preentrega - Turnero para casa de préstamos
 // ==============================
 
 // Declaración de variable con array para almacenar los turnos
@@ -16,20 +16,20 @@ function solicitarDatosTurno() {
   // Menú de selección de sucursal con switch 
   
   let sucursalElegida = prompt("Elegí la sucursal:\n1. La Plata\n2. Berisso\n3. Ensenada");
-  let sucursal = "";
+  let sucursalSeleccionada = "";
   
   switch (sucursalElegida) {
     case "1":
-      sucursal = "La Plata";
+      sucursalSeleccionada = "La Plata";
       break;
     case "2":
-      sucursal = "Berisso";
+      sucursalSeleccionada = "Berisso";
       break;
     case "3":
-      sucursal = "Ensenada";
+      sucursalSeleccionada = "Ensenada";
       break;
     default:
-      sucursal = "Sucursal no válida";
+      sucursalSeleccionada = "Sucursal no válida";
       break;
   }
 
@@ -38,7 +38,7 @@ function solicitarDatosTurno() {
   let horario = prompt("Ingresá el horario deseado (Ej: 10:30)");
 
   // volcado de datos para futura llamada
-  return [nombre, dni, direccion, telefono, sucursal, horario];
+  return [nombre, dni, direccion, telefono, sucursalSeleccionada, horario];
 }
 
 // Guardado de datos
@@ -49,7 +49,7 @@ function registrarTurno(datos) {
     datos[1] !== "" &&
     datos[2] !== "" &&
     datos[3] !== "" &&
-    datos[4] !== "Sucursal no válida" &&
+    datos[4] !== "Sucursal no válida" && // Validar sucursal
     datos[5] !== ""
   ) {
 
@@ -75,14 +75,14 @@ function mostrarTurnos() {
 }
 
 // === Ciclo principal del simulador ===
-alert("Bienvenido al sistema de turnos de la casa de préstamos");
-let continuar = "si";
+alert("Bienvenido al sistema de turnos de Préstamos Express S.A.");
+let continuarIngresando = "si";
 
 // Bucle para ingresar múltiples turnos
-while (continuar === "si") {
-  let datos = solicitarDatosTurno();       // Entrada
-  registrarTurno(datos);                   // Procesamiento
-  continuar = prompt("¿Querés ingresar otro turno? (si / no)");
+while (continuarIngresando === "si") {
+  let nuevoTurno = solicitarDatosTurno();       // Entrada
+  registrarTurno(nuevoTurno);                   // Procesamiento
+  continuarIngresando = prompt("¿Querés ingresar otro turno? (si / no)");
 }
 
 // Muestro resultados finales por consola
