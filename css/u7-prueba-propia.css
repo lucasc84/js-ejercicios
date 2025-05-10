@@ -1,0 +1,14 @@
+/* Clase para texto en negrita */
+.bold {
+    font-weight: bold;
+}
+
+/* Clase para centrar texto */
+.center {
+    text-align: center;
+}
+
+/* Clase para cambiar el color del texto */
+.red {
+    color: red;
+}
