@@ -164,3 +164,11 @@ input.addEventListener("input", function() {
     console.log("Valor del input:", input.value);
     console.log("El usuario Escribió:" +  this.value);
 });
+
+
+let usuario = document.getElementById("select");
+
+usuario.addEventListener("change", function() {
+    console.log("Usuario seleccionado:", usuario.value);
+    console.log("El usuario seleccionó:" +  this.value);
+});
