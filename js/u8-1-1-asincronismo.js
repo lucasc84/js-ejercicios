@@ -90,3 +90,44 @@ fetchErronea()
 //     }
 // }
 // fetchErronea();
+
+
+
+
+// ¿Qué es el Call Stack?
+// El Call Stack (o pila de llamadas) es una estructura de datos en la que se registran las funciones que están siendo ejecutadas en un programa. Cada vez que se invoca una función, esta se apila en el Call Stack. Cuando una función termina de ejecutarse, se desapila, y el control se devuelve a la función anterior en la pila.
+
+
+function first() {
+    console.log("Primera función");
+    second();
+    console.log("Primera función - Parte 2");
+}
+
+function second() {
+    console.log("Segunda función");
+}
+
+first();
+
+// En este caso, la función first() llama a la función second() y luego continúa ejecutando su propio código. La salida será:
+// Primera función
+// Segunda función  
+// Primera función - Parte 2
+// Esto es un ejemplo de código sincrónico, donde las funciones se ejecutan en el orden en que son llamadas.
+
+
+//¿Qué es el Event Loop?
+//El Event Loop es el mecanismo que permite a JavaScript manejar operaciones asincrónicas, como temporizadores y solicitudes HTTP, a pesar de ser single-threaded. Mientras que el Call Stack maneja las funciones sincrónicas, el Event Loop supervisa la cola de tareas (también llamada Callback Queue), donde se colocan las operaciones asincrónicas una vez que están listas para ser ejecutadas.
+
+console.log("Inicio");
+
+setTimeout(() => {
+    console.log("Esto es asincrónico");
+}, 2000);
+
+console.log("Fin");
+
+//En este ejemplo, setTimeout coloca la función en la Callback Queue, y el Event Loop la ejecuta después de 2 segundos, una vez que el Call Stack esté vacío.
+
+
