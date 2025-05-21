@@ -131,3 +131,87 @@ console.log("Fin");
 //En este ejemplo, setTimeout coloca la función en la Callback Queue, y el Event Loop la ejecuta después de 2 segundos, una vez que el Call Stack esté vacío.
 
 
+// setInterval
+// La función setInterval es similar a setTimeout, pero en lugar de ejecutar una función solo una vez después de un retraso, la ejecuta repetidamente en intervalos regulares. Esto es útil para tareas que necesitan realizarse periódicamente, como actualizar un reloj en pantalla o verificar el estado de una solicitud de red.
+
+
+// console.log("Inicio");
+// setInterval(() => {
+//     console.log("Esto se ejecuta cada 1 segundo");
+// }, 1000);
+
+// En este ejemplo, el mensaje se mostrará en la consola cada segundo de manera indefinida hasta que se detenga el intervalo.
+
+
+let temporizador = setTimeout(() => {
+    console.log("Esto no se verá nunca");
+}, 3000);
+
+clearTimeout(temporizador); // Cancela la ejecución del setTimeout
+
+clearTimeout(setInterval); // Cancela la ejecución del setTimeout
+
+let intervalo = setInterval(() => {
+    console.log("Esto no se verá repetidamente");
+}, 1000);
+
+clearInterval(intervalo); // Cancela la ejecución del setInterval
+
+
+
+// Uso de Try-Catch-Finally
+// El bloque try-catch-finally se utiliza para manejar errores en JavaScript. El bloque try contiene el código que puede generar un error, el bloque catch captura el error si ocurre, y el bloque finally se ejecuta siempre, independientemente de si hubo un error o no.
+
+try {
+    let resultado = dividir(10, 0); // Esto generará un error
+    console.log("Resultado:", resultado);
+} catch (error) {
+    console.error("Se produjo un error:", error.message);
+} finally {
+    console.log("Operación completada.");
+}
+
+function dividir(a, b) {
+    if (b === 0) {
+        throw new Error("No se puede dividir por cero.");
+    }
+    return a / b;
+}
+
+
+// Lanzar Errores Apropiadamente
+// Utiliza throw para lanzar errores personalizados cuando detectes condiciones en las que el código no pueda continuar correctamente
+
+// function dividir (a, b) {
+//     if (b === 0) {
+//         throw new Error("No se puede dividir por cero.");
+//     }
+//     return a / b;
+// }
+
+
+// Manejo de Errores Asincrónicos
+// En funciones asíncronas, usa try-catch junto con async-await para manejar errores.
+
+// Para promesas, utiliza catch para capturar errores que ocurran durante la ejecución de la promesa.
+
+// Ejemplo con async-await:
+
+
+// async function fetchData() {
+//     try {
+//         let response = await fetch('<https://api.example.com/data>');
+//         let data = await response.json();
+//         return data;
+//     } catch (error) {
+//         console.error("Error al obtener los datos:", error);
+//     }
+// }
+
+// Ejemplo con Promesas:
+
+
+fetch('<https://api.example.com/data>')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("Error:", error));
