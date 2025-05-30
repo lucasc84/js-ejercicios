@@ -1,0 +1,16 @@
+header {
+background-color: black;
+color: white;
+text-align: center;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin: 10px;
+}
+
+section {
+    margin-top: 20px;
+    text-align: center;
+}
